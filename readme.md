@@ -11,3 +11,9 @@ I styled the icon to became more attractive.
 Used openweathermap.org to get the API.
 Used local storage to persist the city I searched up already, that will help to type less if we want to use the same city we can just enter it from the local array of cities.
 Added images to show the weather by using the weather map.
+My deployed link is as follows
+https://dhanya-krishnan2.github.io/weather-dashboard/
+The screenshots are attached below
+![(/2020-06-17%20(2).png)
+![](/2020-06-17%20(2).png)
+![](/2020-06-18.png)
