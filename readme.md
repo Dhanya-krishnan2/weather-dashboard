@@ -10,6 +10,7 @@ we will get weather for 5 days so that we can plan for trip accordignly.
 I styled the icon to became more attractive.
 Used openweathermap.org to get the API.
 Used local storage to persist the city I searched up already, that will help to type less if we want to use the same city we can just enter it from the local array of cities.
+The jason string from the url help us fing out the particular images provided in the output.
 Added images to show the weather by using the weather map.
 My deployed link is as follows
 https://dhanya-krishnan2.github.io/weather-dashboard/
