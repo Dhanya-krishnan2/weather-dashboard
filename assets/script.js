@@ -26,11 +26,11 @@ function createCityList(citySearchList) {
     createCityList(citySearchList);
   // declaring variable and assignig the url from open weather map org.
     var queryURL =
-      "https://api.openweathermap.org/data/2.5/weather?&units=imperial&appid=885e9149105e8901c9809ac018ce8658&q=" +
+      "https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=885e9149105e8901c9809ac018ce8658&q=" +
       city;
   
     var queryURL2 =
-      "https://api.openweathermap.org/data/2.5/forecast?&units=imperial&appid=885e9149105e8901c9809ac018ce8658&q=" +
+      "https://api.openweathermap.org/data/2.5/forecast?&units=metric&appid=885e9149105e8901c9809ac018ce8658&q=" +
       city;    
   //declaing variable and assigning the values as latitude and logitude
     var latitude;
@@ -68,7 +68,7 @@ function createCityList(citySearchList) {
         $("#current-icon").empty();
         $("#current-icon").append(weatherIcon);
   
-        $("#current-temp").text("Temperature: " + weather.main.temp + " °F");
+        $("#current-temp").text("Temperature: " + weather.main.temp + " °c");
         $("#current-humidity").text("Humidity: " + weather.main.humidity + "%");
         $("#current-wind").text("Wind Speed: " + weather.wind.speed + " MPH");
   
@@ -76,7 +76,7 @@ function createCityList(citySearchList) {
         longitude = weather.coord.lon;
   
         var queryURL3 =
-          "https://api.openweathermap.org/data/2.5/uvi/forecast?&units=imperial&appid=885e9149105e8901c9809ac018ce8658&q=" +
+          "https://api.openweathermap.org/data/2.5/uvi/forecast?&units=metric&appid=885e9149105e8901c9809ac018ce8658&q=" +
           "&lat=" +
           latitude +
           "&lon=" +
@@ -117,7 +117,7 @@ function createCityList(citySearchList) {
               $("#forecast-date" + forecastPosition).append(
                 forecastDate.text(nowMoment.add(1, "days").format("M/D/YYYY"))
               );
-  
+              // declaring a variable for the icon and using the idea in the original url we used that is according to the position of id in the json.
               var forecastIcon = $("<img>");
               forecastIcon.attr(
                 "src",
@@ -132,7 +132,7 @@ function createCityList(citySearchList) {
               console.log(forecast.list[i].weather[0].icon);
   
               $("#forecast-temp" + forecastPosition).text(
-                "Temp: " + forecast.list[i].main.temp + " °F"
+                "Temp: " + forecast.list[i].main.temp + " °c"
               );
               $("#forecast-humidity" + forecastPosition).text(
                 "Humidity: " + forecast.list[i].main.humidity + "%"
