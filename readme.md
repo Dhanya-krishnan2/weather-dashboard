@@ -18,3 +18,5 @@ The screenshots are attached below
 ![(/2020-06-17%20(2).png)
 ![](/2020-06-17%20(2).png)
 ![](/2020-06-18.png)
+We can use both farenheit and cesius for temperature reading the screenshot is shown below
+![](/2020-06-20%20(2).png)
